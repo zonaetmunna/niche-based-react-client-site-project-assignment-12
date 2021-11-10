@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const ReviewUser = () => {
      const { register, handleSubmit, reset } = useForm();
      const onSubmit = data => {
-          const url = 'http://localhost:5000/review';
+          const url = 'https://young-depths-90342.herokuapp.com/review';
           fetch(url, {
                method: 'POST',
                headers: {

@@ -19,7 +19,7 @@ const Purchase = () => {
      const [product, setProduct] = useState({})
 
      useEffect(() => {
-          const url = `http://localhost:5000/products/${id}`;
+          const url = `https://young-depths-90342.herokuapp.com/products/${id}`;
           fetch(url)
                .then(res => res.json())
                .then(data => {
@@ -33,7 +33,7 @@ const Purchase = () => {
      const onSubmit = data => {
 
           // send to database
-          const url = 'http://localhost:5000/orders';
+          const url = 'https://young-depths-90342.herokuapp.com/orders';
           fetch(url, {
                method: 'POST',
                headers: {
