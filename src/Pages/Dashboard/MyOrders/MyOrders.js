@@ -34,7 +34,7 @@ const MyOrders = () => {
                                    <TableRow>
                                         <TableCell>user name</TableCell>
                                         <TableCell align="right"> user email</TableCell>
-                                        <TableCell align="right">service name</TableCell>
+                                        <TableCell align="right">Product name</TableCell>
                                         <TableCell align="right">action</TableCell>
 
                                    </TableRow>

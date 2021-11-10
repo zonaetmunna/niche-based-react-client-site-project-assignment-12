@@ -8,9 +8,9 @@ import { Container, ListItemButton, ListItemText, Typography } from '@mui/materi
 
 const Footer = () => {
      return (
-          <div>
-               <Box sx={{ flexGrow: 1 }}>
-                    <Container>
+          <div style={{ background: 'blue', color: 'white' }}>
+               <Box sx={{ flexGrow: 1, m: 5 }}>
+                    <Container sx={{ m: 5 }}>
                          <Grid container spacing={2}>
                               <Grid item xs={6} md={3}>
                                    <Typography variant="h4">Help</Typography>
