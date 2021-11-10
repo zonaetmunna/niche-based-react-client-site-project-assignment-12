@@ -44,6 +44,7 @@ const Header = () => {
                               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                                    <NavLink to="/explore">Explore</NavLink>
                               </Typography>
+                              {user.email && <NavLink to="/dashboard"> Dashboard</NavLink>}
                               {user.email ?
                                    <Button onClick={logOut} color="inherit">Logout</Button>
                                    : <NavLink to="/login"><Button variant="contained">Login</Button>

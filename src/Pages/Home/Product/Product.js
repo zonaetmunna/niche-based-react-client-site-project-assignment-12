@@ -9,12 +9,12 @@ import Typography from '@mui/material/Typography';
 import { useHistory } from 'react-router';
 
 const Product = ({ product }) => {
-     const { id, name, tags, image, description, price } = product;
+     const { _id, name, tags, image, description, price } = product;
      const history = useHistory();
 
 
      const handleGoPurchase = () => {
-          const url = `/purchase/${id}`;
+          const url = `/purchase/${_id}`;
           history.push(url)
      }
 
