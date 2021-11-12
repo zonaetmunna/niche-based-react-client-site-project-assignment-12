@@ -1,10 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import useAuth from '../../../Hooks/useAuth';
 
 
 const ReviewUser = () => {
+     const { user } = useAuth();
      const { register, handleSubmit, reset } = useForm();
      const onSubmit = data => {
+
           const url = 'https://young-depths-90342.herokuapp.com/review';
           fetch(url, {
                method: 'POST',
@@ -28,11 +31,16 @@ const ReviewUser = () => {
           <div>
                <h1>Please review our service</h1>
                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input {...register("productName")} />
+                    <input defaultValue={user.displayName} {...register("displayName")} placeholder={user.displayName} />
                     <br />
-                    <input  {...register("comment")} />
+                    <input defaultValue={user.email} {...register("email")} placeholder={user.email} />
                     <br />
-
+                    <input  {...register("productName")} placeholder="products name" />
+                    <br />
+                    <input  {...register("comment")} placeholder="comments" />
+                    <br />
+                    <input type="number" {...register("star", { min: 0, max: 5 })} placeholder="rating" />
+                    <br />
                     <input type="submit" />
                </form>
           </div>

@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from '../../../Hooks/useAuth';
 
@@ -27,7 +27,7 @@ const MakeAdmin = () => {
                .then(data => {
                     if (data.modifiedCount) {
                          alert('make admin successfully')
-                         setEmail('')
+
                     }
                     console.log(data);
                })
@@ -37,7 +37,7 @@ const MakeAdmin = () => {
 
      return (
           <div>
-               <h1>this is makeAdmin</h1>
+               <Typography variant="h5">Make Admin</Typography>
                <form onSubmit={handleSubmit}>
                     <TextField
                          label="Standard"

@@ -1,12 +1,12 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 
-const Pay = () => {
+const Payment = () => {
      return (
           <div>
-               <Typography>Payment system coming soon</Typography>
+               <Typography variant="h4">payment  system is coming soon</Typography>
           </div>
      );
 };
 
-export default Pay;
+export default Payment;

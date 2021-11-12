@@ -8,40 +8,39 @@ import { Container, ListItemButton, ListItemText, Typography } from '@mui/materi
 
 const Footer = () => {
      return (
-          <div style={{ background: 'blue', color: 'white' }}>
+          <div style={{ background: '#0742FD', color: 'white' }}>
                <Box sx={{ flexGrow: 1, m: 5 }}>
                     <Container sx={{ m: 5 }}>
                          <Grid container spacing={2}>
-                              <Grid item xs={6} md={3}>
-                                   <Typography variant="h4">Help</Typography>
+                              <Grid item xs={6} md={4}>
+                                   <Typography variant="h4">Information</Typography>
                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Help" />
+                                        <ListItemText primary="Store Locator" />
                                    </ListItemButton>
                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Spam" />
+                                        <ListItemText primary="Awards & Rewards" />
                                    </ListItemButton>
                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Spam" />
-                                   </ListItemButton>
-                              </Grid>
-                              <Grid item xs={6} md={3}>
-                                   <Typography variant="h4">Help</Typography>
-                                   <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Spam" />
+                                        <ListItemText primary="Shipping Details" />
                                    </ListItemButton>
                               </Grid>
-                              <Grid item xs={6} md={3}>
-                                   <Typography variant="h4">service</Typography>
+                              <Grid item xs={6} md={4}>
+                                   <Typography variant="h4">Contact us</Typography>
                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Spam" />
+                                        <i style={{ margin: 3 }} class="fab fa-google"></i>
+                                        <br />
+                                        <i style={{ margin: 3 }} class="fab fa-facebook-square"></i>
+                                        <br />
+                                        <i style={{ margin: 3 }} class="fab fa-whatsapp-square"></i>
+                                        <br />
+                                        <Typography variant="body1"> +000 - 123456789</Typography>
                                    </ListItemButton>
                               </Grid>
-                              <Grid item xs={6} md={3}>
-                                   <Typography variant="h4">Contact</Typography>
-                                   <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Spam" />
-                                   </ListItemButton>
+                              <Grid item xs={6} md={4}>
+                                   <Typography variant="h5">Subscribe to our</Typography>
+                                   <Typography sx={{ mt: 2 }}>Be the first to hear about new arrivals, by invitation only sales and special events</Typography>
                               </Grid>
+
                          </Grid>
                     </Container>
                </Box>
