@@ -90,6 +90,8 @@ const Purchase = () => {
                                    <br />
                                    <input style={{ marginBottom: "10px" }} defaultValue={user.email}{...register("email")} />
                                    <br />
+                                   <input style={{ marginBottom: "10px" }} type="number" {...register("phone")} placeholder="your number" />
+                                   <br />
                                    <input style={{ marginBottom: "10px" }} defaultValue={product.name} {...register("productName")} placeholder={product.name} />
                                    <br />
                                    <input style={{ marginBottom: "10px" }} defaultValue={product.price} {...register("productPrice")} placeholder={product.price} />

@@ -36,7 +36,7 @@ function Dashboard(props) {
      // nested route
      const { path, url } = useRouteMatch();
      // 
-     const { admin, logOut } = useAuth();
+     const { user, admin, logOut } = useAuth();
 
      const handleDrawerToggle = () => {
           setMobileOpen(!mobileOpen);
@@ -46,20 +46,10 @@ function Dashboard(props) {
           <div>
                <Toolbar />
                <Divider />
-
+               {/*nav link */}
                <Box sx={{ px: 4 }}>
-                    <Link to="/home" style={{ textDecoration: 'none' }} >Home</Link>
-                    <br />
-                    <Link to={`${url}`} style={{ textDecoration: 'none' }} >MyOrders</Link>
-                    <br />
 
-                    <Link to={`${url}/reviewUser`} style={{ textDecoration: 'none' }} >Review</Link>
-                    <br />
-                    <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} >Pay</Link>
-                    <br />
-                    <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} ><Button onClick={logOut} color="inherit">Logout</Button></Link>
-
-                    {admin && <Box >
+                    {admin ? <Box>
                          <Link to={`${url}/manageAllOrders`} style={{ textDecoration: 'none' }} >Manage all order</Link>
                          <br />
                          <Link to={`${url}/addProduct`} style={{ textDecoration: 'none' }} >Add Product</Link>
@@ -67,8 +57,21 @@ function Dashboard(props) {
                          <Link to={`${url}/makeAdmin`} style={{ textDecoration: 'none' }} >Make Admin</Link>
                          <br />
                          <Link to={`${url}/manageProducts`} style={{ textDecoration: 'none' }} >Manage Products</Link>
-                         <br />
-                    </Box>}
+                    </Box> :
+                         <Box>
+                              <Link to="/home" style={{ textDecoration: 'none' }} >Home</Link>
+                              <br />
+                              <Link to={`${url}`} style={{ textDecoration: 'none' }} >MyOrders</Link>
+                              <br />
+
+                              <Link to={`${url}/reviewUser`} style={{ textDecoration: 'none' }} >Review</Link>
+                              <br />
+                              <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} >Pay</Link>
+                              <br />
+                         </Box>
+                    }
+
+                    <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} ><Button onClick={logOut} color="inherit">Logout</Button></Link>
                </Box>
 
           </div>

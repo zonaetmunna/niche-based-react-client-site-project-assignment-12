@@ -27,6 +27,7 @@ const useFirebase = () => {
           createUserWithEmailAndPassword(auth, email, password)
                .then((userCredential) => {
                     const newUser = { email, displayName: name }
+                    setUser(newUser);
                     setError('')
                     saveUser(email, name, 'POST');
                     updateProfile(auth.currentUser, {
@@ -36,6 +37,7 @@ const useFirebase = () => {
                     }).catch((error) => {
 
                     });
+                    history.replace('/')
 
                })
                .catch((error) => {
@@ -52,7 +54,7 @@ const useFirebase = () => {
                     setUser(user)
                     setError('');
 
-                    // redirect
+                    // redirect location and history
                     const destination = location?.state?.from || '/';
                     history.replace(destination)
 
