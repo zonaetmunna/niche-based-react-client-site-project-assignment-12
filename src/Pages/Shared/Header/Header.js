@@ -104,8 +104,8 @@ const Header = () => {
                                    {user.email && <NavLink to="/dashboard" className={navItem}> Dashboard</NavLink>}
                                    {user.email ?
                                         <Button onClick={logOut} color="inherit">Logout</Button>
-                                        : <NavLink to="/login"><Button variant="contained">Login</Button>
-                                        </NavLink>}
+                                        : <Button ><NavLink to="/login" className={navItem}> Login</NavLink></Button>
+                                   }
                               </Box>
                          </Toolbar>
                     </AppBar>
