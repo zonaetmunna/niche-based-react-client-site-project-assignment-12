@@ -1,5 +1,6 @@
 import { Card, CardContent, Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
 
 const Review = () => {
      const [reviews, setReviews] = useState([]);
@@ -34,6 +35,15 @@ const Review = () => {
                                              <Typography variant="body2" color="text.secondary">
                                                   {review.comment}
                                              </Typography>
+
+                                             <Rating
+                                                  style={{ fontSize: '7px', color: 'blue' }}
+                                                  initialRating={review.star}
+                                                  emptySymbol="fa fa-star-o fa-2x "
+                                                  fullSymbol="fa fa-star fa-2x"
+                                                  readonly
+                                             />
+
                                         </CardContent>
 
                                    </Card>
@@ -41,6 +51,7 @@ const Review = () => {
                          }
                     </Grid>
                </Container>
+
           </div>
      );
 };
