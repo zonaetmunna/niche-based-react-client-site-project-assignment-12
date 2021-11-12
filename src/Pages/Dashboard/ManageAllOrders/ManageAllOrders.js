@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Container, Grid } from '@mui/material';
 
 
 const ManageAllOrders = () => {
@@ -23,34 +24,40 @@ const ManageAllOrders = () => {
 
      return (
           <div>
-               <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                         <TableHead>
-                              <TableRow>
-                                   <TableCell align="left">order user name</TableCell>
-                                   <TableCell align="left">order user email</TableCell>
-                                   <TableCell align="left">products name</TableCell>
+               <Container>
+                    <Grid>
+                         <Grid xs={12} sm={8} md={12}>
+                              <TableContainer component={Paper}>
+                                   <Table aria-label="simple table">
+                                        <TableHead>
+                                             <TableRow>
+                                                  <TableCell align="left">order user name</TableCell>
+                                                  <TableCell align="left">order user email</TableCell>
+                                                  <TableCell align="left">products name</TableCell>
 
 
-                              </TableRow>
-                         </TableHead>
-                         <TableBody>
-                              {products.map((row) => (
-                                   <TableRow
-                                        key={row.name}
-                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                   >
-                                        <TableCell component="th" scope="row">
-                                             {row.productName}
-                                        </TableCell>
-                                        <TableCell align="right">{row.productPrice}</TableCell>
-                                        <TableCell align="right">{row.fat}</TableCell>
+                                             </TableRow>
+                                        </TableHead>
+                                        <TableBody>
+                                             {products.map((row) => (
+                                                  <TableRow
+                                                       key={row.name}
+                                                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                                  >
+                                                       <TableCell component="th" scope="row">
+                                                            {row.productName}
+                                                       </TableCell>
+                                                       <TableCell align="right">{row.productPrice}</TableCell>
+                                                       <TableCell align="right">{row.fat}</TableCell>
 
-                                   </TableRow>
-                              ))}
-                         </TableBody>
-                    </Table>
-               </TableContainer>
+                                                  </TableRow>
+                                             ))}
+                                        </TableBody>
+                                   </Table>
+                              </TableContainer>
+                         </Grid>
+                    </Grid>
+               </Container>
           </div>
      );
 };

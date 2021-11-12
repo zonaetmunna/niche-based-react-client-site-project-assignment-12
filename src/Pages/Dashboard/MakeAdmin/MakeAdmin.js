@@ -27,6 +27,7 @@ const MakeAdmin = () => {
                .then(data => {
                     if (data.modifiedCount) {
                          alert('make admin successfully')
+                         e.target.reset()
 
                     }
                     console.log(data);
@@ -40,11 +41,12 @@ const MakeAdmin = () => {
                <Typography variant="h5">Make Admin</Typography>
                <form onSubmit={handleSubmit}>
                     <TextField
-                         label="Standard"
+                         sx={{ mb: 4 }}
+                         label="email"
                          variant="standard"
                          onBlur={handleOnBlur}
                     />
-
+                    <br />
                     <Button type="submit" variant="contained">make admin</Button>
                </form>
           </div>

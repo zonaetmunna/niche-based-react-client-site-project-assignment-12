@@ -13,10 +13,10 @@ const Review = () => {
      return (
           <div>
                <Container sx={{ m: 5 }}>
-                    <Typography sx={{ textAlign: 'center', color: '#4C8EFA', mt: 5 }} variant="h4" >Customer Review</Typography>
+                    <Typography sx={{ textAlign: 'center', color: '#4C8EFA', mt: 5, mb: 4 }} variant="h4" >Customer Review</Typography>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                          {
-                              reviews.map(review => <Grid item xs={12} sm={4} md={6} key={review._id}>
+                              reviews.map(review => <Grid item xs={12} sm={4} md={4} key={review._id}>
                                    <Card sx={{ maxWidth: 345 }}>
 
                                         <CardContent>

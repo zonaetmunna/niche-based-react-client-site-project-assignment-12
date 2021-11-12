@@ -15,7 +15,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Button, Grid } from '@mui/material';
+import { Button, Container, Grid } from '@mui/material';
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import MyOrders from '../MyOrders/MyOrders';
 import ReviewUser from '../ReviewUser/ReviewUser';
@@ -59,9 +59,6 @@ function Dashboard(props) {
                     <br />
                     <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} ><Button onClick={logOut} color="inherit">Logout</Button></Link>
 
-
-
-
                     {admin && <Box >
                          <Link to={`${url}/manageAllOrders`} style={{ textDecoration: 'none' }} >Manage all order</Link>
                          <br />
@@ -80,102 +77,103 @@ function Dashboard(props) {
      const container = window !== undefined ? () => window().document.body : undefined;
 
      return (
-          <Box sx={{ display: 'flex' }}>
-               <CssBaseline />
-               <AppBar
-                    position="fixed"
-                    sx={{
-                         width: { sm: `calc(100% - ${drawerWidth}px)` },
-                         ml: { sm: `${drawerWidth}px` },
-                    }}
-               >
-                    <Toolbar>
-                         <IconButton
-                              color="inherit"
-                              aria-label="open drawer"
-                              edge="start"
-                              onClick={handleDrawerToggle}
-                              sx={{ mr: 2, display: { sm: 'none' } }}
+          <Container>
+               {/* <Grid item spacing={2}> */}
+               {/* <Grid xs={12} md={6}> */}
+               <Box sx={{ display: 'flex' }}>
+                    <CssBaseline />
+                    <AppBar
+                         position="fixed"
+                         sx={{
+                              width: { sm: `calc(100% - ${drawerWidth}px)` },
+                              ml: { sm: `${drawerWidth}px` },
+                         }}
+                    >
+                         <Toolbar>
+                              <IconButton
+                                   color="inherit"
+                                   aria-label="open drawer"
+                                   edge="start"
+                                   onClick={handleDrawerToggle}
+                                   sx={{ mr: 2, display: { sm: 'none' } }}
+                              >
+                                   <MenuIcon />
+                              </IconButton>
+                              <Typography variant="h6" noWrap component="div">
+                                   Dashboard
+                              </Typography>
+                         </Toolbar>
+                    </AppBar>
+                    <Box
+                         component="nav"
+                         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                         aria-label="mailbox folders"
+                    >
+                         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+                         <Drawer
+                              container={container}
+                              variant="temporary"
+                              open={mobileOpen}
+                              onClose={handleDrawerToggle}
+                              ModalProps={{
+                                   keepMounted: true, // Better open performance on mobile.
+                              }}
+                              sx={{
+                                   display: { xs: 'block', sm: 'none' },
+                                   '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                              }}
                          >
-                              <MenuIcon />
-                         </IconButton>
-                         <Typography variant="h6" noWrap component="div">
-                              Dashboard
-                         </Typography>
-                    </Toolbar>
-               </AppBar>
-               <Box
-                    component="nav"
-                    sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-                    aria-label="mailbox folders"
-               >
-                    {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-                    <Drawer
-                         container={container}
-                         variant="temporary"
-                         open={mobileOpen}
-                         onClose={handleDrawerToggle}
-                         ModalProps={{
-                              keepMounted: true, // Better open performance on mobile.
-                         }}
-                         sx={{
-                              display: { xs: 'block', sm: 'none' },
-                              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                         }}
+                              {drawer}
+                         </Drawer>
+                         <Drawer
+                              variant="permanent"
+                              sx={{
+                                   display: { xs: 'none', sm: 'block' },
+                                   '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                              }}
+                              open
+                         >
+                              {drawer}
+                         </Drawer>
+                    </Box>
+
+                    <Box
+                         component="main"
+                         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
                     >
-                         {drawer}
-                    </Drawer>
-                    <Drawer
-                         variant="permanent"
-                         sx={{
-                              display: { xs: 'none', sm: 'block' },
-                              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                         }}
-                         open
-                    >
-                         {drawer}
-                    </Drawer>
+                         <Toolbar />
+                         {/*  */}
+                         {/* <Grid xs={12}> */}
+                         <Switch>
+                              <Route exact path={path}>
+                                   <MyOrders></MyOrders>
+                              </Route>
+                              <Route path={`${path}/reviewUser`}>
+                                   <ReviewUser></ReviewUser>
+                              </Route>
+                              <Route path={`${path}/payment`}>
+                                   <Payment></Payment>
+                              </Route>
+                              <AdminRoute path={`${path}/manageAllOrders`}>
+                                   <ManageAllOrders></ManageAllOrders>
+                              </AdminRoute>
+                              <AdminRoute path={`${path}/addProduct`}>
+                                   <AddProduct></AddProduct>
+                              </AdminRoute>
+                              <AdminRoute path={`${path}/makeAdmin`}>
+                                   <MakeAdmin></MakeAdmin>
+                              </AdminRoute>
+                              <AdminRoute path={`${path}/manageProducts`}>
+                                   <ManageProducts></ManageProducts>
+                              </AdminRoute>
+                         </Switch>
+                         {/* </Grid> */}
+
+                    </Box>
                </Box>
-               <Box
-                    component="main"
-                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-               >
-                    <Toolbar />
-                    {/*  */}
-                    <Switch>
-                         <Route exact path={path}>
-                              <MyOrders></MyOrders>
-                         </Route>
-
-                         <Route path={`${path}/reviewUser`}>
-                              <ReviewUser></ReviewUser>
-                         </Route>
-                         {/* <Route path={`${path}/pay`}>
-                              <Pay></Pay>
-                         </Route> */}
-                         <Route path={`${path}/payment`}>
-                              <Payment></Payment>
-                         </Route>
-
-
-                         <AdminRoute path={`${path}/manageAllOrders`}>
-                              <ManageAllOrders></ManageAllOrders>
-                         </AdminRoute>
-                         <AdminRoute path={`${path}/addProduct`}>
-                              <AddProduct></AddProduct>
-                         </AdminRoute>
-                         <AdminRoute path={`${path}/makeAdmin`}>
-                              <MakeAdmin></MakeAdmin>
-                         </AdminRoute>
-                         <AdminRoute path={`${path}/manageProducts`}>
-                              <ManageProducts></ManageProducts>
-                         </AdminRoute>
-
-                    </Switch>
-
-
-               </Box>
-          </Box>
+               {/* </Grid> */}
+               {/* </Grid> */}
+          </Container>
      );
 }
 

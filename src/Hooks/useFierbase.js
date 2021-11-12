@@ -125,7 +125,7 @@ const useFirebase = () => {
           error,
           isLoading,
           admin,
-          setToken
+          token
      }
 
 }

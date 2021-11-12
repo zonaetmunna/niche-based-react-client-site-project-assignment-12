@@ -36,20 +36,15 @@ const ManageProducts = () => {
      return (
           <div>
                <Container>
-                    <Typography variant="h5"> products : {products.length}</Typography>
                     <Grid item spacing={2}>
-
-                         <Grid xs={12} md={8} sx={{ textAlgin: 'center' }}>
+                         <Typography variant="h5"> products : {products.length}</Typography>
+                         <Grid xs={12} md={12} sx={{ textAlgin: 'center' }}>
                               <TableContainer >
                                    <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                                         <TableHead>
                                              <TableRow>
-
-
-                                                  <TableCell align="right">Product name</TableCell>
-
+                                                  <TableCell >Product name</TableCell>
                                                   <TableCell align="right">Action</TableCell>
-
                                              </TableRow>
                                         </TableHead>
                                         <TableBody>
@@ -61,7 +56,6 @@ const ManageProducts = () => {
                                                        <TableCell component="th" scope="row">
                                                             {product.name}
                                                        </TableCell>
-
                                                        <TableCell align="right"><Button onClick={() => handleDelete(product._id)}>Delete</Button></TableCell>
 
 
