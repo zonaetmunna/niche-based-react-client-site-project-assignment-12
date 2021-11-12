@@ -96,12 +96,12 @@ const Header = () => {
                               <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                                    <NavLink to="/home" className={navItem} > The Hands of Time</NavLink>
                               </Typography>
+                              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                                   <NavLink to="/explore" style={{ mr: 5 }} className={navItem}>Explore</NavLink>
+                              </Typography>
 
                               <Box className={navItemContain}>
-                                   {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> */}
-                                   <NavLink to="/explore" style={{ mr: 5 }} className={navItem}>Explore</NavLink>
-                                   {/* </Typography> */}
-                                   {user.email && <NavLink to="/dashboard" className={navItem}> Dashboard</NavLink>}
+                                   {user.email && <NavLink to="/dashboard" className={navItem}>  Dashboard  </NavLink>}
                                    {user.email ?
                                         <Button onClick={logOut} color="inherit">Logout</Button>
                                         : <Button ><NavLink to="/login" className={navItem}> Login</NavLink></Button>

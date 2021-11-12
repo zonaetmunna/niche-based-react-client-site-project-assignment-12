@@ -48,7 +48,8 @@ function Dashboard(props) {
                <Divider />
                {/*nav link */}
                <Box sx={{ px: 4 }}>
-
+                    <Link to="/home" style={{ textDecoration: 'none' }} >Home</Link>
+                    <br />
                     {admin ? <Box>
                          <Link to={`${url}/manageAllOrders`} style={{ textDecoration: 'none' }} >Manage all order</Link>
                          <br />
@@ -59,8 +60,7 @@ function Dashboard(props) {
                          <Link to={`${url}/manageProducts`} style={{ textDecoration: 'none' }} >Manage Products</Link>
                     </Box> :
                          <Box>
-                              <Link to="/home" style={{ textDecoration: 'none' }} >Home</Link>
-                              <br />
+
                               <Link to={`${url}`} style={{ textDecoration: 'none' }} >MyOrders</Link>
                               <br />
 
