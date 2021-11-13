@@ -30,22 +30,22 @@ const AddProduct = () => {
                          <Grid xs={12} sm={6} md={6}>
                               <Typography sx={{ textAlign: 'left' }} variant="h5" >Add products</Typography>
                               <form onSubmit={handleSubmit(onSubmit)}>
-                                   <input {...register("name")} placeholder="name" />
+                                   <input style={{ marginTop: '10px' }} {...register("name")} placeholder="name" />
                                    <br />
-                                   <input {...register("tags")} placeholder="tags" />
+                                   <input style={{ marginTop: '10px' }}  {...register("tags")} placeholder="tags" />
                                    <br />
-                                   <input {...register("price")} placeholder="price" />
+                                   <input style={{ marginTop: '10px' }}  {...register("price")} placeholder="price" />
                                    <br />
-                                   <input {...register("description")} placeholder="description" />
+                                   <input style={{ marginTop: '10px' }} {...register("description")} placeholder="description" />
                                    <br />
-                                   <input {...register("image")} placeholder="image" />
+                                   <input style={{ marginTop: '10px' }}  {...register("image")} placeholder="image" />
                                    <br />
 
-                                   <input type="submit" />
+                                   <input style={{ marginTop: '10px' }} type="submit" />
                               </form>
                          </Grid>
                          <Grid xs={12} sm={6} md={6}>
-                              <h1>dfd</h1>
+
                          </Grid>
                     </Grid>
                </Container>

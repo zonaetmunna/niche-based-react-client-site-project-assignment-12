@@ -21,6 +21,7 @@ const ManageAllOrders = () => {
                     console.log(data);
                })
      }, [])
+     console.log(products)
 
      return (
           <div>
@@ -48,7 +49,7 @@ const ManageAllOrders = () => {
                                                             {row.productName}
                                                        </TableCell>
                                                        <TableCell align="right">{row.productPrice}</TableCell>
-                                                       <TableCell align="right">{row.fat}</TableCell>
+
 
                                                   </TableRow>
                                              ))}
