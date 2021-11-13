@@ -37,6 +37,9 @@ const Product = ({ product }) => {
                          <Typography variant="body2" color="text.secondary">
                               {price}
                          </Typography>
+                         <Typography variant="body2" color="text.secondary">
+                              {description}
+                         </Typography>
                     </CardContent>
                     <CardActions>
                          <Button onClick={handleGoPurchase} variant="contained">order now</Button>

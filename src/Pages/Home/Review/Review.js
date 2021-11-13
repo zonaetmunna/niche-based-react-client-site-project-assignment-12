@@ -12,7 +12,7 @@ const Review = () => {
      }, [])
      return (
           <div>
-               <Container sx={{ m: 5 }}>
+               <Container >
                     <Typography sx={{ textAlign: 'center', color: '#4C8EFA', mt: 5, mb: 4 }} variant="h4" >Customer Review</Typography>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                          {
@@ -20,15 +20,15 @@ const Review = () => {
                                    <Card sx={{ maxWidth: 345 }}>
 
                                         <CardContent>
-                                             <Typography gutterBottom variant="h5" component="div">
+                                             <Typography gutterBottom variant="h6" component="div">
                                                   {review.displayName
                                                   }
                                              </Typography>
-                                             <Typography gutterBottom variant="h5" component="div">
+                                             <Typography gutterBottom variant="body1" component="div">
                                                   {review.email
                                                   }
                                              </Typography>
-                                             <Typography gutterBottom variant="h5" component="div">
+                                             <Typography gutterBottom variant="h6" component="div">
                                                   {review.productName
                                                   }
                                              </Typography>

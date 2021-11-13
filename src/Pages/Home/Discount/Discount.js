@@ -13,12 +13,12 @@ const Discount = () => {
 
      const { bg } = useStyle();
      return (
-          <div className={bg}>
-               <Container >
-                    <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className={bg} style={{ margin: '20px' }}>
+               <Container sx={{}}>
+                    <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 5, p: 3 }}>
 
                          <Grid item xs={12} md={6} >
-                              <img src="https://i.ibb.co/HCCcYkf/images.jpg" style={{ width: '75' }} alt="" />
+                              <img src="https://i.ibb.co/HCCcYkf/images.jpg" style={{ width: '75%' }} alt="" />
                          </Grid>
                          <Grid item xs={12} md={6} className={bg}>
                               <Typography variant="h3">Rolex</Typography>

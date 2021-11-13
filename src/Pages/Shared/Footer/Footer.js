@@ -12,7 +12,7 @@ const Footer = () => {
                <Box sx={{ flexGrow: 1, m: 5 }}>
                     <Container sx={{ m: 5 }}>
                          <Grid container spacing={2}>
-                              <Grid item xs={6} md={4}>
+                              <Grid item xs={12} md={4}>
                                    <Typography variant="h4">Information</Typography>
                                    <ListItemButton component="a" href="#simple-list">
                                         <ListItemText primary="Store Locator" />
@@ -24,7 +24,7 @@ const Footer = () => {
                                         <ListItemText primary="Shipping Details" />
                                    </ListItemButton>
                               </Grid>
-                              <Grid item xs={6} md={4}>
+                              <Grid item xs={12} md={4}>
                                    <Typography variant="h4">Contact us</Typography>
                                    <ListItemButton component="a" href="#simple-list">
                                         <i style={{ margin: 3 }} class="fab fa-google"></i>
@@ -36,7 +36,7 @@ const Footer = () => {
                                         <Typography variant="body1"> +000 - 123456789</Typography>
                                    </ListItemButton>
                               </Grid>
-                              <Grid item xs={6} md={4}>
+                              <Grid item xs={12} md={4}>
                                    <Typography variant="h5">Subscribe to our</Typography>
                                    <Typography sx={{ mt: 2 }}>Be the first to hear about new arrivals, by invitation only sales and special events</Typography>
                               </Grid>

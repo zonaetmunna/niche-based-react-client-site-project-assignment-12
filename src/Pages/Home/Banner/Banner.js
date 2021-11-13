@@ -22,7 +22,7 @@ const Banner = () => {
                          <Grid container spacing={2} sx={{ display: 'flex', alignItems: 'center' }}>
                               <Grid item xs={12} md={6}>
                                    <Typography sx={{ color: 'secondary.main', m: 2 }} variant="h3">The stone series</Typography>
-                                   <Typography variant="body1" sx={{ m: 2 }}>Rolex offers a wide range of models ranging from professional to classic watches to suit</Typography>
+                                   <Typography variant="body1" sx={{ m: 2 }}>Rolex offers a wide range of models ranging from professional to classic watches to suit Rolex offers a wide range of models ranging</Typography>
                                    <Button sx={{ m: 2 }} variant="contained"><Link style={{ textDecoration: 'none' }} to="/explore">Explore</Link></Button>
                               </Grid>
                               <Grid item xs={12} md={6}>
