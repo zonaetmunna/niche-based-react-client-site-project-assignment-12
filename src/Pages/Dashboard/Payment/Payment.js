@@ -4,7 +4,7 @@ import React from 'react';
 const Payment = () => {
      return (
           <div>
-               <Typography variant="h4">payment  system is coming soon</Typography>
+               <Typography variant="h5">payment  system is coming soon</Typography>
           </div>
      );
 };
