@@ -21,15 +21,14 @@ import MailIcon from '@mui/icons-material/Mail';
 
 
 
-
-
 const Header = () => {
 
      const theme = useTheme();
      const useStyle = makeStyles({
           navItem: {
                textDecoration: 'none',
-               color: 'black'
+               color: 'white',
+               fontSize: 'medium'
           },
 
           navIcon: {
@@ -62,7 +61,7 @@ const Header = () => {
           >
                <List>
                     <ListItem button >
-                         <ListItemText ><Link to="/explore" className={navItem} >Explore</Link></ListItemText>
+                         <ListItemText ><Link to="/explore" className={navItem}  >Explore</Link></ListItemText>
                     </ListItem>
                     <Divider />
                     <ListItem button >
