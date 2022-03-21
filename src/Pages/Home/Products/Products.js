@@ -24,7 +24,7 @@ const Products = () => {
           <div>
 
                <Container sx={{ mt: 5 }}>
-                    <Typography sx={{ textAlign: 'center', color: '#466FF0', m: 3 }} variant="h3">watch</Typography>
+                    <Typography sx={{ textAlign: 'left', color: 'black', mb: 2 }} variant="h4">Watch Product</Typography>
                     <Box sx={{ flexGrow: 1 }}>
                          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                               {

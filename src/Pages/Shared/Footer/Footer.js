@@ -8,24 +8,27 @@ import { Container, ListItemButton, ListItemText, Typography } from '@mui/materi
 
 const Footer = () => {
      return (
-          <div style={{ background: '#0742FD', color: 'white' }}>
+          <div style={{ background: '#240909', color: 'white' }}>
                <Box sx={{ flexGrow: 1, m: 5 }}>
                     <Container sx={{ m: 5 }}>
                          <Grid container spacing={2}>
                               <Grid item xs={12} md={4}>
-                                   <Typography variant="h4">Information</Typography>
-                                   <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Store Locator" />
+                                   <Typography variant="h5">Information</Typography>
+                                   <ListItemButton variant="h6" style={{textAlign:'left'}} component="a" href="#simple-list">
+                                        <ListItemText primary="Home" />
                                    </ListItemButton>
-                                   <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Awards & Rewards" />
+                                   <ListItemButton variant="h6" component="a" href="#simple-list">
+                                        <ListItemText primary="About Us" />
                                    </ListItemButton>
-                                   <ListItemButton component="a" href="#simple-list">
+                                   <ListItemButton variant="h6" component="a" href="#simple-list">
                                         <ListItemText primary="Shipping Details" />
+                                   </ListItemButton>
+                                   <ListItemButton variant="h6" component="a" href="#simple-list">
+                                        <ListItemText primary="Explore watch" />
                                    </ListItemButton>
                               </Grid>
                               <Grid item xs={12} md={4}>
-                                   <Typography variant="h4">Contact us</Typography>
+                                   <Typography variant="h5">Contact us</Typography>
                                    <ListItemButton component="a" href="#simple-list">
                                         <i style={{ margin: 3 }} class="fab fa-google"></i>
                                         <br />

@@ -17,7 +17,7 @@ const Explore = () => {
           <div>
                <Header></Header>
                <Container sx={{ mt: 5 }}>
-                    <Typography sx={{ textAlign: 'center' }} variant="h2">watch</Typography>
+                    <Typography sx={{ textAlign: 'left' }} variant="h4">All Watch</Typography>
                     <Box sx={{ flexGrow: 1 }}>
                          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                               {

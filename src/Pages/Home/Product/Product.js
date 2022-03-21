@@ -20,24 +20,24 @@ const Product = ({ product }) => {
 
      return (
           <Grid item xs={12} sm={12} md={4} >
-               <Card sx={{ maxWidth: 345, height: 1 }}>
+               <Card sx={{ maxWidth: 345, height: 1 }} style={{color:'black'}}>
                     <CardMedia
                          component="img"
                          height="300"
                          image={image}
                          alt="green iguana"
                     />
-                    <CardContent>
+                    <CardContent style={{color:'black'}}>
                          <Typography gutterBottom variant="h5" component="div">
                               {name}
                          </Typography>
-                         <Typography variant="body2" color="text.secondary">
+                         <Typography variant="body2" >
                               {tags}
                          </Typography>
-                         <Typography variant="body2" color="text.secondary">
-                              {price}
+                         <Typography variant="body2"  >
+                              $ {price}
                          </Typography>
-                         <Typography variant="body2" color="text.secondary">
+                         <Typography variant="body2" >
                               {description}
                          </Typography>
                     </CardContent>
