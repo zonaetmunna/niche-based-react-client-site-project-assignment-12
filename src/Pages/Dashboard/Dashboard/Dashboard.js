@@ -80,7 +80,7 @@ function Dashboard(props) {
      const container = window !== undefined ? () => window().document.body : undefined;
 
      return (
-          <Container>
+          <Container >
                {/* <Grid item spacing={2}> */}
                {/* <Grid xs={12} md={6}> */}
                <Box sx={{ display: 'flex' }}>
