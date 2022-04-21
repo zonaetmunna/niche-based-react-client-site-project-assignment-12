@@ -47,9 +47,8 @@ const MyOrders = () => {
           <div>
 
                <Container>
-                    <Typography variant="h5"> my orders : {orders.length}</Typography>
+                    <Typography variant="h5"> {user.displayName} orders : {orders.length}</Typography>
                     <Grid item spacing={2}>
-
                          <Grid xs={12} md={12} sx={{ textAlgin: 'center' }}>
                               <TableContainer component={Paper}>
                                    <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">

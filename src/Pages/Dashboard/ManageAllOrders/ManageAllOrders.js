@@ -18,11 +18,10 @@ const ManageAllOrders = () => {
                .then(res => res.json())
                .then(data => {
                     setProducts(data);
-                    console.log(data);
+                    // console.log(data);
                })
      }, [])
      console.log(products)
-
      return (
           <div>
                <Container>
@@ -35,22 +34,21 @@ const ManageAllOrders = () => {
                                                   <TableCell align="left">order user name</TableCell>
                                                   <TableCell align="left">order user email</TableCell>
                                                   <TableCell align="left">products name</TableCell>
-
-
+                                                  <TableCell align="left">products Price</TableCell>
                                              </TableRow>
                                         </TableHead>
                                         <TableBody>
                                              {products.map((row) => (
                                                   <TableRow
-                                                       key={row.name}
+                                                       key={row._id}
                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                                   >
                                                        <TableCell component="th" scope="row">
-                                                            {row.productName}
+                                                            {row.userName}
                                                        </TableCell>
-                                                       <TableCell align="right">{row.productPrice}</TableCell>
-
-
+                                                       <TableCell align="left">{row.email}</TableCell>
+                                                       <TableCell align="left">{row.productName}</TableCell>
+                                                       <TableCell align="left">{row.productPrice}</TableCell>
                                                   </TableRow>
                                              ))}
                                         </TableBody>
