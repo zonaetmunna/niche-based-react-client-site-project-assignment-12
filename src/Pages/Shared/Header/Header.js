@@ -18,6 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { useSpring } from 'react-spring';
 
 
 
@@ -25,6 +26,7 @@ const Header = () => {
 
      const theme = useTheme();
      const useStyle = makeStyles({
+          
           navItem: {
                textDecoration: 'none',
                color: 'white',
@@ -54,11 +56,18 @@ const Header = () => {
      const { user, logOut } = useAuth();
      const [state, setState] = React.useState(false);
 
+     // react-spring
+     const styles = useSpring({
+          loop: true,
+          to: [
+            { opacity: 1, color: '#ffaaee' },
+            { opacity: 0, color: 'rgb(14,26,19)' },
+          ],
+          from: { opacity: 0, color: 'red' },
+        })
+
      const list = (
-          <Box
-               sx={{ width: 250 }}
-               role="presentation"
-          >
+          <Box sx={{ width: 250 }}  role="presentation">
                <List>
                     <ListItem button >
                          <ListItemText ><Link to="/explore" className={navItem}  >Explore</Link></ListItemText>
@@ -79,7 +88,7 @@ const Header = () => {
 
      return (
           <div  >
-               <Box style={{ background: '#240909', color: 'white' }} sx={{ flexGrow: 1 }}>
+               <Box style={{ background: '#030000', color: 'white' }} sx={{ flexGrow: 1 }}>
                     <AppBar position="static" >
                          <Toolbar>
                               <IconButton

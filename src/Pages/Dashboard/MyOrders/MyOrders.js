@@ -13,7 +13,7 @@ const MyOrders = () => {
      const [orders, setOrders] = useState([]);
      const { user } = useAuth();
      useEffect(() => {
-          const url = `https://young-depths-90342.herokuapp.com/orders?email=${user.email}`;
+          const url = `https://young-depths-90342.herokuapp.com/orders/specific?email=${user.email}`;
           console.log(url);
           fetch(url)
                .then(res => res.json())

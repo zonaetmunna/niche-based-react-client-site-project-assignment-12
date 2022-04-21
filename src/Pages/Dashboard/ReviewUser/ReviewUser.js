@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../Hooks/useAuth';
@@ -6,8 +7,8 @@ import useAuth from '../../../Hooks/useAuth';
 const ReviewUser = () => {
      const { user } = useAuth();
      const { register, handleSubmit, reset } = useForm();
-     const onSubmit = data => {
 
+     const onSubmit = data => {
           const url = 'https://young-depths-90342.herokuapp.com/review';
           fetch(url, {
                method: 'POST',
@@ -21,7 +22,6 @@ const ReviewUser = () => {
                     if (data.insertedId) {
                          alert('comment add successfully');
                          reset();
-
                     }
                     console.log(data);
                })
@@ -29,7 +29,7 @@ const ReviewUser = () => {
 
      return (
           <div>
-               <h1>Please review our service</h1>
+               <Typography variant='h5'>Please review our service</Typography>
                <form onSubmit={handleSubmit(onSubmit)}>
                     <input defaultValue={user.displayName} {...register("displayName")} placeholder={user.displayName} />
                     <br />
