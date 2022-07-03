@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Container, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
@@ -14,10 +14,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { useSpring } from 'react-spring';
 
 
@@ -88,8 +85,8 @@ const Header = () => {
 
      return (
           <div  >
-               <Box style={{ background: '#030000', color: 'white' }} sx={{ flexGrow: 1 }}>
-                    <AppBar position="static" >
+               <Box sx={{ flexGrow: 1, background: '#030000', color: 'error.main'}}>
+                    <AppBar>
                          <Toolbar>
                               <IconButton
                                    size="large"
@@ -121,7 +118,6 @@ const Header = () => {
 
                <div>
                     <React.Fragment>
-
                          <Drawer
                               open={state}
                               onClose={() => setState(false)}
@@ -129,7 +125,6 @@ const Header = () => {
                               {list}
                          </Drawer>
                     </React.Fragment>
-
                </div>
           </div >
      );
